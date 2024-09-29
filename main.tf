@@ -83,12 +83,7 @@ resource "aws_db_subnet_group" "name1" {
 }
 
 resource "aws_eip" "nat" {
-  domain = "vpc"
-  
-  # tags = {
-  #     Name = "${local.rsc_name}-EIP"
-  #   }
-  
+  domain = "vpc" 
 }
 
 resource "aws_nat_gateway" "main" {

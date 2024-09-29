@@ -107,7 +107,3 @@ variable "vpc_peering_tags" {
   default = {}
 
 }
-
-# variable "eip_tags" {
-#   type = string
-# }
