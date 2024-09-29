@@ -84,6 +84,14 @@ resource "aws_db_subnet_group" "name1" {
 
 resource "aws_eip" "nat" {
   domain = "vpc"
+  
+  tags = merge(
+    var.common_tags,
+    var.eip_tags,
+    {
+      Name = "${local.rsc_name}-EIP"
+    }
+  )
 }
 
 resource "aws_nat_gateway" "main" {
