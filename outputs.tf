@@ -14,9 +14,14 @@ output "database_subnet_ids" {
   value = aws_subnet.database[*].id
 }
 
-output "az_list" {
-  value = data.aws_availability_zones.available
+output "database_subnet_group_name" {
+  value = aws_db_subnet_group.name1
 }
+
+
+# output "az_list" {
+#   value = data.aws_availability_zones.available
+# }
 
 
 # output "default_vpc_route_table_info" {
